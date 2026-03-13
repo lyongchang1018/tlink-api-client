@@ -1,0 +1,1149 @@
+openapi: 3.0.1
+info:
+  description: tlink-open-api-sdk
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  title: open-api-java
+  version: 0.0.1
+servers:
+- description: Generated server url
+  url: http://127.0.0.1:8082
+security:
+- Authenticate: []
+  tlinkAppId: []
+paths:
+  /api/yunzutai/getYunzutaiList:
+    post:
+      operationId: getYunzutaiList
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - yunzutai-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/user/userLogin:
+    post:
+      operationId: userLogin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/user/updateUserInfo:
+    post:
+      operationId: updateUserInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/user/updatePassword:
+    post:
+      operationId: updatePassword
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/user/getVerifyCode:
+    post:
+      operationId: getVerifyCode
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/user/getUserInfo:
+    post:
+      operationId: getUserInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/scheduler/updateScheduler:
+    post:
+      operationId: updateScheduler
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - scheduler-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/scheduler/deleteScheduler:
+    post:
+      operationId: deleteScheduler
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - scheduler-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/scheduler/addScheduler:
+    post:
+      operationId: addScheduler
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - scheduler-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/scheduler/activeScheduler:
+    post:
+      operationId: activeScheduler
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - scheduler-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/updateModbus:
+    post:
+      operationId: updateModbus
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/updateDevice:
+    post:
+      operationId: updateDevice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/updateDeviceGroup:
+    post:
+      operationId: updateDeviceGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/switcherController:
+    post:
+      operationId: switcherController
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/setProtocolLabel:
+    post:
+      operationId: setProtocolLabel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/setParams:
+    post:
+      operationId: setParams
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/setModbus:
+    post:
+      operationId: setModbus
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/setFlag:
+    post:
+      operationId: setFlag
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/sendDataPoint:
+    post:
+      operationId: sendDatapoint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/saveOrUpdateMapping:
+    post:
+      operationId: updateUserInfo_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getSingleSensorDatas:
+    post:
+      operationId: getSingleSensorDatas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getSingleDeviceDatas:
+    post:
+      operationId: getSingleDeviceDatas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getSensorMapping:
+    post:
+      operationId: getSensorMapping
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getSensorHistroy:
+    post:
+      operationId: getSensorHistroy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getProtocolLabel:
+    post:
+      operationId: getProtocolLabel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getParams:
+    post:
+      operationId: getParams
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getModbus:
+    post:
+      operationId: getModbus
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getFlag:
+    post:
+      operationId: setMqtt
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getDevices:
+    post:
+      operationId: getDevices
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getDeviceSensorDatas:
+    post:
+      operationId: getDeviceSensorDatas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/getDeviceGroup:
+    post:
+      operationId: getDeviceGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/deviceWrite:
+    post:
+      operationId: deviceWrite
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/deleteDevice:
+    post:
+      operationId: deleteDevice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/deleteDeviceGroup:
+    post:
+      operationId: deleteDeviceGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/addDevice:
+    post:
+      operationId: addDevice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/device/addDeviceGroup:
+    post:
+      operationId: addDeviceGroup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - device-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/updateAlarms:
+    post:
+      operationId: updateAlarms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/saveContact:
+    post:
+      operationId: saveContact
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/reBindWeChat:
+    post:
+      operationId: reBindWeChat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/getContactById:
+    post:
+      operationId: getContactById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/getAllContacts:
+    post:
+      operationId: getAllContacts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/getAlarms:
+    post:
+      operationId: getAlarms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/getAlarmsHistory:
+    post:
+      operationId: getAlarmsHistory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/deleteContacts:
+    post:
+      operationId: deleteContacts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/deleteContact:
+    post:
+      operationId: deleteContact
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/deleteAlarms:
+    post:
+      operationId: deleteAlarms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/addAlarms:
+    post:
+      operationId: addAlarms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/alarms/activeAlarms:
+    post:
+      operationId: activeAlarms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties:
+                type: object
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - alarms-controller
+      x-content-type: application/json
+      x-accepts:
+      - '*/*'
+  /api/scheduler/getScheduler:
+    get:
+      operationId: getScheduler
+      parameters:
+      - explode: true
+        in: query
+        name: jsonStr
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - scheduler-controller
+      x-accepts:
+      - '*/*'
+components:
+  schemas: {}
+  securitySchemes:
+    Authenticate:
+      flows:
+        password:
+          authorizationUrl: http://127.0.0.1:8082/oauth/authorize
+          scopes:
+            tlink: tlink
+          tokenUrl: http://127.0.0.1:8082/oauth/token
+      type: oauth2
+    tlinkAppId:
+      in: header
+      name: tlinkAppId
+      type: apiKey
+
