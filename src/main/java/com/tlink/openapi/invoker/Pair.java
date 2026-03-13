@@ -13,7 +13,7 @@
 
 package com.tlink.openapi.invoker;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-13T11:20:38.487021300+08:00[Asia/Shanghai]", comments = "Generator version: 7.17.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-03-13T16:30:22.369941300+08:00[Asia/Shanghai]", comments = "Generator version: 7.17.0")
 public class Pair {
   private final String name;
   private final String value;

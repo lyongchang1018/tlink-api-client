@@ -2,7 +2,7 @@
 
 open-api-java
 - API version: 0.0.1
-  - Build date: 2026-03-13T11:20:38.487021300+08:00[Asia/Shanghai]
+  - Build date: 2026-03-13T16:30:22.369941300+08:00[Asia/Shanghai]
   - Generator version: 7.17.0
 
 tlink-open-api-sdk
@@ -39,9 +39,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.tlink.openapi</groupId>
+  <groupId>io.github.lyongchang1018</groupId>
   <artifactId>tlink-api-client</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.0.RELEASE</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.tlink.openapi:tlink-api-client:1.0.1"
+     implementation "io.github.lyongchang1018:tlink-api-client:1.0.0.RELEASE"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/tlink-api-client-1.0.1.jar`
+* `target/tlink-api-client-1.0.0.RELEASE.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

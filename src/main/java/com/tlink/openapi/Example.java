@@ -25,13 +25,13 @@ public class Example {
       //Authenticate.setAccessToken("YOUR ACCESS TOKEN");
 
       Map<String, String> parameters = new HashMap<String, String>();
-      parameters.put("username", "YOUR USERNAME");
-      parameters.put("password", "YOUR PASSWORD");
+      parameters.put("username", "test");
+      parameters.put("password", "mnkj23329978");
 
       String basePath = "https://app.dtuip.com";
       
-      String clientId = "YOUR API KEY";
-      String clientSecret = "YOUR API SECRET";
+      String clientId = "d3a25f47552843be8483011c12769d7f";
+      String clientSecret = "dfgergwergdfawefawcafv";
 
       ApiClient defaultClient = new ApiClient(basePath, clientId, clientSecret, parameters);
       defaultClient.setApiKey(clientId);
@@ -40,7 +40,7 @@ public class Example {
       apiInstance.setCustomBaseUrl(basePath);
 
       Map<String, Object> requestBody = new HashMap<>();
-      requestBody.put("userId", "YOUR USERID");
+      requestBody.put("userId", "223");
 //      requestBody.put("currPage","1");
 //      requestBody.put("pageSize", "10");
 

@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "com.tlink.openapi",
+    organization := "io.github.lyongchang1018",
     name := "tlink-api-client",
-    version := "1.0.1",
+    version := "1.0.0.RELEASE",
     scalaVersion := "2.11.12",
     scalacOptions ++= Seq("-feature"),
     compile / javacOptions ++= Seq("-Xlint:deprecation"),
