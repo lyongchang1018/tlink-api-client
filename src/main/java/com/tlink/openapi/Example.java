@@ -10,7 +10,7 @@ import com.tlink.openapi.api.UserControllerApi;
 public class Example {
   
   public static void main(String[] args) {
-
+	  
       //ApiClient defaultClient = Configuration.getDefaultApiClient();
       //defaultClient.setBasePath("http://127.0.0.1:8082");
 
@@ -25,13 +25,13 @@ public class Example {
       //Authenticate.setAccessToken("YOUR ACCESS TOKEN");
 
       Map<String, String> parameters = new HashMap<String, String>();
-      parameters.put("username", "test");
-      parameters.put("password", "mnkj23329978");
+      parameters.put("username", "YOUR USERNAME");
+      parameters.put("password", "YOUR PASSWORD");
 
       String basePath = "https://app.dtuip.com";
       
-      String clientId = "d3a25f47552843be8483011c12769d7f";
-      String clientSecret = "dfgergwergdfawefawcafv";
+      String clientId = "YOUR API KEY";
+      String clientSecret = "YOUR API SECRET";
 
       ApiClient defaultClient = new ApiClient(basePath, clientId, clientSecret, parameters);
       defaultClient.setApiKey(clientId);
@@ -40,15 +40,13 @@ public class Example {
       apiInstance.setCustomBaseUrl(basePath);
 
       Map<String, Object> requestBody = new HashMap<>();
-      requestBody.put("userId", "223");
-//      requestBody.put("currPage","1");
-//      requestBody.put("pageSize", "10");
-
+      requestBody.put("userId", "YOUR USERID");
+      
       try {
           String result = apiInstance.getUserInfo(requestBody);
           System.out.println(result);
       } catch (ApiException e) {
-          System.err.println("Exception when calling YunzutaiControllerApi#getYunzutaiList");
+          System.err.println("Exception when calling UserControllerApi#getUserInfo");
           System.err.println("Status code: " + e.getCode());
           System.err.println("Reason: " + e.getResponseBody());
           System.err.println("Response headers: " + e.getResponseHeaders());
