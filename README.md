@@ -81,40 +81,43 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
+import java.util.HashMap;
+import java.util.Map;
+
+import com.tlink.openapi.api.UserControllerApi;
 import com.tlink.openapi.invoker.ApiClient;
 import com.tlink.openapi.invoker.ApiException;
-import com.tlink.openapi.invoker.Configuration;
-import com.tlink.openapi.invoker.auth.*;
-import com.tlink.openapi.model.*;
-import com.tlink.openapi.api.AlarmsControllerApi;
 
 public class Example {
   public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://127.0.0.1:8082");
-    
-    // Configure API key authorization: tlinkAppId
-    ApiKeyAuth tlinkAppId = (ApiKeyAuth) defaultClient.getAuthentication("tlinkAppId");
-    tlinkAppId.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //tlinkAppId.setApiKeyPrefix("Token");
+      Map<String, String> parameters = new HashMap<String, String>();
+      parameters.put("username", "YOUR USERNAME");
+      parameters.put("password", "YOUR PASSWORD");
 
-    // Configure OAuth2 access token for authorization: Authenticate
-    OAuth Authenticate = (OAuth) defaultClient.getAuthentication("Authenticate");
-    Authenticate.setAccessToken("YOUR ACCESS TOKEN");
+      String basePath = "https://app.dtuip.com";
+      
+      String clientId = "YOUR API KEY";
+      String clientSecret = "YOUR API SECRET";
 
-    AlarmsControllerApi apiInstance = new AlarmsControllerApi(defaultClient);
-    Map<String, Object> requestBody = null; // Map<String, Object> | 
-    try {
-      String result = apiInstance.activeAlarms(requestBody);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling AlarmsControllerApi#activeAlarms");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
+      ApiClient defaultClient = new ApiClient(basePath, clientId, clientSecret, parameters);
+      defaultClient.setApiKey(clientId);
+
+      UserControllerApi apiInstance = new UserControllerApi(defaultClient);
+      apiInstance.setCustomBaseUrl(basePath);
+
+      Map<String, Object> requestBody = new HashMap<>();
+      requestBody.put("userId", "YOUR USERID");
+      
+      try {
+          String result = apiInstance.getUserInfo(requestBody);
+          System.out.println(result);
+      } catch (ApiException e) {
+          System.err.println("Exception when calling UserControllerApi#getUserInfo");
+          System.err.println("Status code: " + e.getCode());
+          System.err.println("Reason: " + e.getResponseBody());
+          System.err.println("Response headers: " + e.getResponseHeaders());
+          e.printStackTrace();
+      }
   }
 }
 
@@ -179,28 +182,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
-
-
-<a id="documentation-for-authorization"></a>
-## Documentation for Authorization
-
-
-Authentication schemes defined for the API:
-<a id="Authenticate"></a>
-### Authenticate
-
-- **Type**: OAuth
-- **Flow**: password
-- **Authorization URL**: http://127.0.0.1:8082/oauth/authorize
-- **Scopes**: 
-  - tlink: tlink
-
-<a id="tlinkAppId"></a>
-### tlinkAppId
-
-- **Type**: API key
-- **API key parameter name**: tlinkAppId
-- **Location**: HTTP header
 
 
 ## Recommendation
